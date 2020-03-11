@@ -1,0 +1,10 @@
+---
+    - hosts: mygrp
+      become: true
+      tasks:
+           - name: Open firewall port for HTTP
+             firewalld:
+                 service: http
+                 permanent: yes
+                 immediate: yes
+                 state: enabled
