@@ -1,0 +1,10 @@
+---
+   - hosts: mygrp
+     become: true
+     tasks:
+         - name: Creating a New User
+           user:
+              name: newuser01
+              comment: New User 01
+              shell: /bin/bash
+
